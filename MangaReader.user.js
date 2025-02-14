@@ -16,7 +16,7 @@
 // ==/UserScript==
 (function () {
 	'use strict';
-	if (document.url=="https://zonatmo.com/profile/follow"){
+	if (document.URL=="https://zonatmo.com/profile/follow"){
 		document.querySelector("div.col-12.col-lg-4.text-center").remove();
 		document.querySelector("div.col-12.col-lg-8").style.maxWidth="100%";
 		document.querySelector("div.col-12.col-lg-8").style.width="100%";
@@ -32,7 +32,7 @@
 		(Array.from(document.querySelector("div.container.p-0.p-sm-2").children[0].children[0].children[0].children).slice(1)).forEach(el=>{
 			el.style.flex="0 1 calc(20% - 0px)";
 			el.style.maxWidth="20%";
-		})
+		});
 	} else {
 		if (!(document.URL).toLowerCase().match("cascade")){
 			document.querySelectorAll("nav > div a")[2].click();
