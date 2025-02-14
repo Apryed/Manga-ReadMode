@@ -40,8 +40,10 @@
 					document.querySelectorAll("nav > div a")[3].click();
 				break;
 				default:
+					if (document.querySelectorAll("div[class='d-inline px-1']")[3].innerText == ' ANCHO'){document.querySelectorAll("div[class='d-inline px-1']")[3].children[0].click();}
+					if (document.querySelectorAll("div[class='d-inline px-1']")[4].children[0].style.display== "none"){document.querySelectorAll("div[class='d-inline px-1']")[4].children[1].click();}
 					document.getElementById("main-container").setAttribute("style", "background-color:black; padding: 25px 5em !important; max-width:100%");
-					document.querySelector("div[class='col-12 col-lg-4 col-xl-3']").parentElement.remove()
+					document.querySelector("div[class='col-12 col-lg-4 col-xl-3']").parentElement.remove();
 			}
 		}
 	};
